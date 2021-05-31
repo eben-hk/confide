@@ -9,27 +9,27 @@ import (
 type Payload struct {
 	Code       int         `json:"code"`
 	Data       interface{} `json:"data" default:""`
-	HttpStatus int
-	IsSuccess  bool   `json:"is_success"`
-	Message    string `json:"message" default:""`
+	HttpStatus int         `json:"-"`
+	IsSuccess  bool        `json:"is_success"`
+	Message    string      `json:"message" default:""`
 }
 
 // JSON send payload to consumer in JSON format
 func JSON(w http.ResponseWriter, p Payload) {
-	var httpStatus int
+	httpStatus := p.HttpStatus
 
 	if p.IsSuccess == true {
 		if p.Message == "" {
 			p.Message = sCodeText[p.Code]
 		}
-		if p.HttpStatus == 0 {
+		if httpStatus == 0 {
 			httpStatus = sHttpStatus[p.Code]
 		}
 	} else if p.IsSuccess == false {
 		if p.Message == "" {
 			p.Message = fCodeText[p.Code]
 		}
-		if p.HttpStatus == 0 {
+		if httpStatus == 0 {
 			httpStatus = fHttpStatus[p.Code]
 		}
 	}

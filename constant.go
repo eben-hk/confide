@@ -4,9 +4,10 @@ import "net/http"
 
 const (
 	// Success response code
-	SCodeCreated = 1
-	SCodeFound   = 2
-	SCodeUp      = 3
+	SCodeCreated   = 1
+	SCodeFound     = 2
+	SCodeUp        = 3
+	SCodeGenerated = 4
 
 	// Fail response code
 	FCodeDataNotFound = 1
@@ -16,14 +17,15 @@ const (
 	FCodeSelfRefer    = 5
 )
 
-// Success text response
+// Success message
 var sCodeText = map[int]string{
-	SCodeCreated: "successfully created",
-	SCodeFound:   "data found",
-	SCodeUp:      "we are up and running",
+	SCodeCreated:   "successfully created",
+	SCodeFound:     "data found",
+	SCodeUp:        "we are up and running",
+	SCodeGenerated: "successfully generated",
 }
 
-// Fail text response
+// Fail message
 var fCodeText = map[int]string{
 	FCodeDataNotFound: "data not found",
 	FCodeDb:           "database error",
@@ -34,9 +36,10 @@ var fCodeText = map[int]string{
 
 // Success http status
 var sHttpStatus = map[int]int{
-	SCodeCreated: http.StatusCreated,
-	SCodeFound:   http.StatusOK,
-	SCodeUp:      http.StatusOK,
+	SCodeCreated:   http.StatusCreated,
+	SCodeFound:     http.StatusOK,
+	SCodeUp:        http.StatusOK,
+	SCodeGenerated: http.StatusOK,
 }
 
 // Fail http status

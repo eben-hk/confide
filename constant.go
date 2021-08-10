@@ -10,11 +10,12 @@ const (
 	SCodeGenerated = 4
 
 	// Fail response code
-	FCodeDataNotFound = 1
-	FCodeDb           = 2
-	FCodeBadRequest   = 3
-	FCodeUriNotFound  = 4
-	FCodeSelfRefer    = 5
+	FCodeDataNotFound     = 1
+	FCodeDb               = 2
+	FCodeBadRequest       = 3
+	FCodeUriNotFound      = 4
+	FCodeSelfRefer        = 5
+	FCodeMethodNotAllowed = 6
 )
 
 // Success message
@@ -27,11 +28,12 @@ var sCodeText = map[int]string{
 
 // Fail message
 var fCodeText = map[int]string{
-	FCodeDataNotFound: "data not found",
-	FCodeDb:           "database error",
-	FCodeBadRequest:   "bad request",
-	FCodeUriNotFound:  "uri not found",
-	FCodeSelfRefer:    "self-refer is not allowed",
+	FCodeDataNotFound:     "data not found",
+	FCodeDb:               "database error",
+	FCodeBadRequest:       "bad request",
+	FCodeUriNotFound:      "uri not found",
+	FCodeSelfRefer:        "self-refer is not allowed",
+	FCodeMethodNotAllowed: "method not allowed",
 }
 
 // Success http status
@@ -44,9 +46,10 @@ var sHttpStatus = map[int]int{
 
 // Fail http status
 var fHttpStatus = map[int]int{
-	FCodeDataNotFound: http.StatusOK,
-	FCodeDb:           http.StatusInternalServerError,
-	FCodeBadRequest:   http.StatusBadRequest,
-	FCodeUriNotFound:  http.StatusNotFound,
-	FCodeSelfRefer:    http.StatusBadRequest,
+	FCodeDataNotFound:     http.StatusOK,
+	FCodeDb:               http.StatusInternalServerError,
+	FCodeBadRequest:       http.StatusBadRequest,
+	FCodeUriNotFound:      http.StatusNotFound,
+	FCodeSelfRefer:        http.StatusBadRequest,
+	FCodeMethodNotAllowed: http.StatusMethodNotAllowed,
 }

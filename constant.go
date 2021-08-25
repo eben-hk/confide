@@ -17,6 +17,7 @@ const (
 	FCodeUriNotFound      = 4
 	FCodeSelfRefer        = 5
 	FCodeMethodNotAllowed = 6
+	FCodeDuplicateEntry   = 7
 )
 
 // Success message
@@ -36,6 +37,7 @@ var fCodeText = map[int]string{
 	FCodeUriNotFound:      "uri not found",
 	FCodeSelfRefer:        "self-refer is not allowed",
 	FCodeMethodNotAllowed: "method not allowed",
+	FCodeDuplicateEntry:   "duplicate entry",
 }
 
 // Success http status
@@ -55,4 +57,5 @@ var fHttpStatus = map[int]int{
 	FCodeUriNotFound:      http.StatusNotFound,
 	FCodeSelfRefer:        http.StatusBadRequest,
 	FCodeMethodNotAllowed: http.StatusMethodNotAllowed,
+	FCodeDuplicateEntry:   http.StatusConflict,
 }

@@ -25,7 +25,7 @@ const (
 var sCodeText = map[int]string{
 	SCodeCreated:   "successfully created",
 	SCodeFound:     "data found",
-	SCodeUp:        "service are up and running",
+	SCodeUp:        "service is up and running",
 	SCodeGenerated: "successfully generated",
 	SCodeDeleted:   "successfully deleted",
 	SCodeUpdated:   "successfully updated",

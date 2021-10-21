@@ -58,7 +58,7 @@ var fHttpStatus = map[int]int{
 	FCodeDb:               http.StatusInternalServerError,
 	FCodeBadRequest:       http.StatusBadRequest,
 	FCodeUriNotFound:      http.StatusNotFound,
-	FCodeSelfRefer:        http.StatusBadRequest,
+	FCodeSelfRefer:        http.StatusOK,
 	FCodeMethodNotAllowed: http.StatusMethodNotAllowed,
 	FCodeDuplicateEntry:   http.StatusConflict,
 }

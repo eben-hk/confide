@@ -19,6 +19,7 @@ const (
 	FCodeSelfRefer        = 5
 	FCodeMethodNotAllowed = 6
 	FCodeDuplicateEntry   = 7
+	FCodeMaximumLimit     = 8
 )
 
 // Success message
@@ -40,6 +41,7 @@ var fCodeText = map[int]string{
 	FCodeSelfRefer:        "self-refer is not allowed",
 	FCodeMethodNotAllowed: "method not allowed",
 	FCodeDuplicateEntry:   "duplicate entry",
+	FCodeMaximumLimit:     "maximum limit reached",
 }
 
 // Success http status
@@ -61,4 +63,5 @@ var fHttpStatus = map[int]int{
 	FCodeSelfRefer:        http.StatusOK,
 	FCodeMethodNotAllowed: http.StatusMethodNotAllowed,
 	FCodeDuplicateEntry:   http.StatusConflict,
+	FCodeMaximumLimit:     http.StatusOK,
 }

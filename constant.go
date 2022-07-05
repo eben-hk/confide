@@ -20,6 +20,7 @@ const (
 	FCodeMethodNotAllowed = 6
 	FCodeDuplicateEntry   = 7
 	FCodeMaximumLimit     = 8
+	FCodeUnauthorized     = 9
 )
 
 // Success message
@@ -42,6 +43,7 @@ var fCodeText = map[int]string{
 	FCodeMethodNotAllowed: "method not allowed",
 	FCodeDuplicateEntry:   "duplicate entry",
 	FCodeMaximumLimit:     "maximum limit reached",
+	FCodeUnauthorized:     "unauthorized",
 }
 
 // Success http status
@@ -64,4 +66,5 @@ var fHttpStatus = map[int]int{
 	FCodeMethodNotAllowed: http.StatusMethodNotAllowed,
 	FCodeDuplicateEntry:   http.StatusConflict,
 	FCodeMaximumLimit:     http.StatusOK,
+	FCodeUnauthorized:     http.StatusUnauthorized,
 }

@@ -36,7 +36,7 @@ var sCodeText = map[int]string{
 // Fail message
 var fCodeText = map[int]string{
 	FCodeDataNotFound:     "data not found",
-	FCodeDb:               "database error",
+	FCodeDb:               "data source error",
 	FCodeBadRequest:       "bad request",
 	FCodeUriNotFound:      "uri not found",
 	FCodeSelfRefer:        "self-refer is not allowed",

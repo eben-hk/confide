@@ -11,6 +11,7 @@ const (
 	SCodeDeleted   = 5
 	SCodeUpdated   = 6
 	SCodeValidated = 7
+	SCodeUploaded  = 8
 
 	// Fail response code
 	FCodeDataNotFound     = 1
@@ -33,6 +34,7 @@ var sCodeText = map[int]string{
 	SCodeDeleted:   "successfully deleted",
 	SCodeUpdated:   "successfully updated",
 	SCodeValidated: "successfully validated",
+	SCodeUploaded:  "successfully uploaded",
 }
 
 // Fail message
@@ -57,6 +59,7 @@ var sHttpStatus = map[int]int{
 	SCodeDeleted:   http.StatusOK,
 	SCodeUpdated:   http.StatusOK,
 	SCodeValidated: http.StatusOK,
+	SCodeUploaded:  http.StatusOK,
 }
 
 // Fail http status

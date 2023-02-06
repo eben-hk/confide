@@ -35,7 +35,7 @@ func JSON(w http.ResponseWriter, p Payload) {
 	}
 
 	if p.Data == nil {
-		p.Data = map[interface{}]interface{}{}
+		p.Data = map[string]interface{}{}
 	}
 
 	w.Header().Set("Access-Control-Allow-Origin", "*")

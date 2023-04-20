@@ -23,6 +23,7 @@ const (
 	FCodeDuplicateEntry   = 7
 	FCodeMaximumLimit     = 8
 	FCodeUnauthorized     = 9
+	FCodeOneDevicePolicy  = 10
 )
 
 // Success message
@@ -48,6 +49,7 @@ var fCodeText = map[int]string{
 	FCodeDuplicateEntry:   "duplicate entry",
 	FCodeMaximumLimit:     "maximum limit reached",
 	FCodeUnauthorized:     "unauthorized",
+	FCodeOneDevicePolicy:  "multiple account in one device is not allowed",
 }
 
 // Success http status
@@ -73,4 +75,5 @@ var fHttpStatus = map[int]int{
 	FCodeDuplicateEntry:   http.StatusConflict,
 	FCodeMaximumLimit:     http.StatusOK,
 	FCodeUnauthorized:     http.StatusUnauthorized,
+	FCodeOneDevicePolicy:  http.StatusOK,
 }

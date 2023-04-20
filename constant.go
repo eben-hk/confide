@@ -49,7 +49,7 @@ var fCodeText = map[int]string{
 	FCodeDuplicateEntry:   "duplicate entry",
 	FCodeMaximumLimit:     "maximum limit reached",
 	FCodeUnauthorized:     "unauthorized",
-	FCodeOneDevicePolicy:  "multiple account in one device is not allowed",
+	FCodeOneDevicePolicy:  "multiple accounts in one device is not allowed",
 }
 
 // Success http status

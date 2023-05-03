@@ -72,7 +72,7 @@ var fHttpStatus = map[int]int{
 	FCodeUriNotFound:      http.StatusNotFound,
 	FCodeSelfRefer:        http.StatusOK,
 	FCodeMethodNotAllowed: http.StatusMethodNotAllowed,
-	FCodeDuplicateEntry:   http.StatusConflict,
+	FCodeDuplicateEntry:   http.StatusOK,
 	FCodeMaximumLimit:     http.StatusOK,
 	FCodeUnauthorized:     http.StatusUnauthorized,
 	FCodeOneDevicePolicy:  http.StatusOK,

@@ -25,6 +25,7 @@ const (
 	FCodeMaximumLimit     = 8
 	FCodeUnauthorized     = 9
 	FCodeOneDevicePolicy  = 10
+	FCodeInvalidLogin     = 11
 )
 
 // Success message
@@ -52,6 +53,7 @@ var fCodeText = map[int]string{
 	FCodeMaximumLimit:     "maximum limit reached",
 	FCodeUnauthorized:     "unauthorized",
 	FCodeOneDevicePolicy:  "multiple accounts in one device is not allowed",
+	FCodeInvalidLogin:     "invalid login",
 }
 
 // Success http status
@@ -79,4 +81,5 @@ var fHttpStatus = map[int]int{
 	FCodeMaximumLimit:     http.StatusOK,
 	FCodeUnauthorized:     http.StatusUnauthorized,
 	FCodeOneDevicePolicy:  http.StatusOK,
+	FCodeInvalidLogin:     http.StatusOK,
 }

@@ -13,6 +13,7 @@ const (
 	SCodeValidated = 7
 	SCodeUploaded  = 8
 	SCodeSynced    = 9
+	SCodeLogin     = 10
 
 	// Fail response code
 	FCodeDataNotFound     = 1
@@ -39,6 +40,7 @@ var sCodeText = map[int]string{
 	SCodeValidated: "successfully validated",
 	SCodeUploaded:  "successfully uploaded",
 	SCodeSynced:    "successfully synced",
+	SCodeLogin:     "successfully login",
 }
 
 // Fail message
@@ -67,6 +69,7 @@ var sHttpStatus = map[int]int{
 	SCodeValidated: http.StatusOK,
 	SCodeUploaded:  http.StatusOK,
 	SCodeSynced:    http.StatusOK,
+	SCodeLogin:     http.StatusOK,
 }
 
 // Fail http status

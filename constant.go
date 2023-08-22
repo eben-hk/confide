@@ -27,6 +27,7 @@ const (
 	FCodeUnauthorized     = 9
 	FCodeOneDevicePolicy  = 10
 	FCodeInvalidLogin     = 11
+	FCodeOTP              = 12
 )
 
 // Success message
@@ -56,6 +57,7 @@ var fCodeText = map[int]string{
 	FCodeUnauthorized:     "unauthorized",
 	FCodeOneDevicePolicy:  "multiple accounts in one device is not allowed",
 	FCodeInvalidLogin:     "invalid login",
+	FCodeOTP:              "otp code: invalid / expired / reach max attempt",
 }
 
 // Success http status
@@ -85,4 +87,5 @@ var fHttpStatus = map[int]int{
 	FCodeUnauthorized:     http.StatusUnauthorized,
 	FCodeOneDevicePolicy:  http.StatusOK,
 	FCodeInvalidLogin:     http.StatusOK,
+	FCodeOTP:              http.StatusOK,
 }

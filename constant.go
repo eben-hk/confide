@@ -28,6 +28,7 @@ const (
 	FCodeOneDevicePolicy  = 10
 	FCodeInvalidLogin     = 11
 	FCodeOTP              = 12
+	FCodeGeneral          = 13
 )
 
 // Success message
@@ -58,6 +59,7 @@ var fCodeText = map[int]string{
 	FCodeOneDevicePolicy:  "multiple accounts in one device is not allowed",
 	FCodeInvalidLogin:     "invalid login",
 	FCodeOTP:              "otp code: invalid / expired / reach max attempt",
+	FCodeGeneral:          "general error",
 }
 
 // Success http status
@@ -88,4 +90,5 @@ var fHttpStatus = map[int]int{
 	FCodeOneDevicePolicy:  http.StatusOK,
 	FCodeInvalidLogin:     http.StatusOK,
 	FCodeOTP:              http.StatusOK,
+	FCodeGeneral:          http.StatusOK,
 }

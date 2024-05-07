@@ -18,14 +18,14 @@ type Payload struct {
 func JSON(w http.ResponseWriter, p Payload) {
 	httpStatus := p.HttpStatus
 
-	if p.IsSuccess == true {
+	if p.IsSuccess {
 		if p.Message == "" {
 			p.Message = sCodeText[p.Code]
 		}
 		if httpStatus == 0 {
 			httpStatus = sHttpStatus[p.Code]
 		}
-	} else if p.IsSuccess == false {
+	} else if !p.IsSuccess {
 		if p.Message == "" {
 			p.Message = fCodeText[p.Code]
 		}

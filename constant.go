@@ -31,6 +31,8 @@ const (
 	FCodeGeneral             = 13
 	FCodeInternalServerError = 14
 	FCodeIncompleteData      = 15
+	FCodeTokenInvalid        = 16
+	FCodeTokenExpired        = 17
 )
 
 // Success message
@@ -64,6 +66,8 @@ var fCodeText = map[int]string{
 	FCodeGeneral:             "general error",
 	FCodeInternalServerError: "internal server error",
 	FCodeIncompleteData:      "incomplete data",
+	FCodeTokenInvalid:        "invalid token",
+	FCodeTokenExpired:        "expired token",
 }
 
 // Success http status
@@ -97,4 +101,6 @@ var fHttpStatus = map[int]int{
 	FCodeGeneral:             http.StatusOK,
 	FCodeInternalServerError: http.StatusInternalServerError,
 	FCodeIncompleteData:      http.StatusOK,
+	FCodeTokenInvalid:        http.StatusOK,
+	FCodeTokenExpired:        http.StatusOK,
 }

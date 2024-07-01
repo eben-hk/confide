@@ -12,10 +12,10 @@ type Payload struct {
 	HttpStatus int         `json:"-"`
 	IsSuccess  bool        `json:"is_success"`
 	Message    string      `json:"message" default:""`
-	Messages   Languages   `json:"messages"`
+	Messages   Language    `json:"messages"`
 }
 
-type Languages struct {
+type Language struct {
 	EN string `json:"en"`
 	ID string `json:"id"`
 }

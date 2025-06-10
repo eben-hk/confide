@@ -35,6 +35,7 @@ const (
 	FCodeTokenInvalid         = 16
 	FCodeTokenExpired         = 17
 	FCodeInvalidFileExtension = 18
+	FCodeStatusIsDisabled     = 19
 )
 
 // Success message
@@ -72,6 +73,7 @@ var fCodeText = map[int]string{
 	FCodeTokenInvalid:         "invalid token",
 	FCodeTokenExpired:         "expired token",
 	FCodeInvalidFileExtension: "invalid file extension",
+	FCodeStatusIsDisabled:     "status is disabled",
 }
 
 // Success http status
@@ -109,4 +111,5 @@ var fHttpStatus = map[int]int{
 	FCodeTokenInvalid:         http.StatusOK,
 	FCodeTokenExpired:         http.StatusOK,
 	FCodeInvalidFileExtension: http.StatusUnprocessableEntity,
+	FCodeStatusIsDisabled:     http.StatusOK,
 }
